@@ -1,4 +1,4 @@
-//----------------------------------------------------------------------------------------------//
+// ----------------------------------------------------------------------------------------------//
 // EXERCICE 1
 // Crée une fonction qui prend deux paramètres (a et b) et retourne la somme multipliée des deux paramètres.
 // Exemple : a = 2, b = 3 => 2 * 3 = 6 => 6 * 2 = 12
@@ -8,12 +8,18 @@
 // const nomDeMaFonction = (paramètre) => {
 //   // Code de ma fonction
 // }
-// console.log(nomDeMaFonction(On remplace le paramètre par ce qu'on désire)) // 
+// console.log(nomDeMaFonction(On remplace le paramètre par ce qu'on désire)) //
 
-// CODE ICI
+// const multip = (a, b) => {
+//   return a * b;
+// };
 
-//----------------------------------------------------------------------------------------------//
-// EXERCICE 2
+// console.log(multip(5, 5));
+
+// Exo OK
+
+// //----------------------------------------------------------------------------------------------//
+// // EXERCICE 2
 
 // Crée une fonction qui prend en paramètre un tableau et qui retourne le premier élément du tableau.
 // Exemple : [1, 2, 3] => 1
@@ -21,10 +27,18 @@
 // const monTableau = [1, 2, 3]
 // console.log(monTableau[0]) // 1
 
-// CODE ICI
+// const tableau1 = (tableau) => {
+//   return console.log(tableau[0]);
+// };
 
-//----------------------------------------------------------------------------------------------//
-// EXERCICE 3
+// const myArray = [1, 2, 3, 4];
+
+// console.log(tableau1(myArray));
+
+// Exo OK
+
+// //----------------------------------------------------------------------------------------------//
+// // EXERCICE 3
 
 // Crée une fonction qui prend en paramètre un tableau et qui doit supprimer le dernier élément du tableau.
 // Exemple : [1, 2, 3] => [1, 2]
@@ -33,9 +47,13 @@
 // monTableau.pop()
 // console.log(monTableau) // [1, 2]
 
-// CODE ICI
+// const monTableau = [1, 2, 3];
+// monTableau.pop();
+// console.log(monTableau);
 
-//----------------------------------------------------------------------------------------------//
+// Exo OK
+
+// ----------------------------------------------------------------------------------------------//
 // EXERCICE 4
 
 // Crée une fonction qui prend en paramètre un tableau comprennant des nombres et qui doit retourner la somme de tous les nombres du tableau.
@@ -46,24 +64,48 @@
 //   console.log(monTableau[i]) // 1, 2, 3
 // }
 
-// CODE ICI
+// const tableau4 = [1, 2, 3, 4, 5];
 
-//----------------------------------------------------------------------------------------------//
+// const somme = (tableau4) => {
+//   let total = 0;
+//   for (let i = 0; i < tableau4.length; i++) {
+//     total += tableau4[i];
+//   }
+//   return total;
+// };
+
+// const resultat = somme(tableau4);
+// console.log(resultat);
+
+// Exo OK
+
+// ----------------------------------------------------------------------------------------------//
 
 // EXERCICE 5
-//Crée une fonction qui prend en paramètre une string et qui doit retourner la string inversée.
+// Crée une fonction qui prend en paramètre une string et qui doit retourner la string inversée.
 // Exemple : "Hello" => "olleH"
-// Pour cette exercice on va utiliser la méthode split() qui permet de transformer une string en tableau. Et la méthode reverse() qui permet d'inverser un tableau : 
+// Pour cette exercice on va utiliser la méthode split() qui permet de transformer une string en tableau. Et la méthode reverse() qui permet d'inverser un tableau :
 // const maString = "Hello"
 // const monTableau = maString.split("")
 // console.log(monTableau) // ["H", "e", "l", "l", "o"]
 // const monTableauInverse = monTableau.reverse()
 // console.log(monTableauInverse) // ["o", "l", "l", "e", "H"]
-//Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
+// Maintenant que la string est inversée il faut la remettre en string avec la méthode join().
 
-// CODE ICI
+// const text = "Hello";
 
-//----------------------------------------------------------------------------------------------//
+// const reverseString = (string) => {
+//   const tableau = string.split("");
+//   const tableauReverse = tableau.reverse();
+//   const newText = tableauReverse.join("");
+//   return newText;
+// };
+
+// console.log(reverseString(text));
+
+// Exo OK
+
+// ----------------------------------------------------------------------------------------------//
 
 // EXERCICE 6
 // Crée une fonction qui prend en paramètre un tableau et qui doit retourner le plus grand nombre du tableau.
@@ -72,7 +114,14 @@
 // const monTableau = [1, 2, 3]
 // console.log(Math.max(...monTableau)) // 3
 
-// CODE ICI
+// const monTableau = [1, 2, 3, 4];
+
+// const numberMax = (tableau) => {
+//   return console.log(Math.max(...tableau));
+// };
+// console.log(numberMax(monTableau));
+
+// Exo OK
 
 //----------------------------------------------------------------------------------------------//
 
@@ -82,8 +131,15 @@
 // Pour cette exercice on va utiliser la méthode Math.min() qui permet de retourner le plus petit nombre d'un tableau :
 // const monTableau = [1, 2, 3]
 // console.log(Math.min(...monTableau)) // 1
+// const monTableau = [2, 3, 6, 8];
 
-// CODE ICI
+// const numberMin = (tableau) => {
+//   return console.log(Math.min(...tableau));
+// };
+
+// console.log(numberMin(monTableau));
+
+// Exo OK
 
 //----------------------------------------------------------------------------------------------//
 
@@ -92,15 +148,16 @@
 // Crée une fonction qui prend en paramètre une string et qui doit retourner la string sans les voyelles.
 // Exemple : "Hello" => "Hll"
 // Pour cette exercice on va utiliser la méthode split() qui permet de transformer une string en tableau. Et la méthode filter() qui permet de filtrer un tableau :
-// const maString = "Hello"
-// const monTableau = maString.split("")
-// console.log(monTableau) // ["H", "e", "l", "l", "o"]
+
+// const maString = "Hello";
+// const monTableau = maString.split("");
 // const monTableauFiltre = monTableau.filter((element) => {
-//   return element !== "e" && element !== "o"
-// })
+//   return element !== "e" && element !== "o";
+// });
 
-// CODE ICI
+// console.log(monTableauFiltre);
 
+// Exo OK
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 9
@@ -111,7 +168,15 @@
 // const monTableau = [1, 3, 2]
 // console.log(monTableau.sort()) // [1, 2, 3]
 
-// CODE ICI
+// const tableau = [6, 3, 8, 1, 4];
+
+// const myArray = (Montableau) => {
+//   return console.log(Montableau.sort());
+// };
+
+// console.log(myArray(tableau));
+
+// Exo ok
 
 //----------------------------------------------------------------------------------------------//
 
@@ -128,8 +193,6 @@
 // }
 // console.log(monTableau) // ["Hello", "elloH", "lloHe", "loHel", "oHell"]
 
-// CODE ICI
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 11
@@ -137,12 +200,22 @@
 // Crée une fonction qui prend en paramètre un tableau et qui doit ajouter le nombre 1 à chaque élément du tableau.
 // Exemple : [1, 2, 3] => [2, 3, 4]
 // Pour cette exercice on va utiliser la méthode map() qui permet de parcourir un tableau :
-// const monTableau = [1, 2, 3]
+// const monTableau = [1, 2, 3];
 // const monTableauAddition = monTableau.map((element) => {
-//   return element + 1
-// })
+//   return element + 1;
+// });
 
-// CODE ICI
+// console.log(monTableauAddition);
+
+// myArray = [2, 4, 6, 8];
+
+// const monTableau = myArray.map((element) => {
+//   return element + 1;
+// });
+
+// console.log(monTableau);
+
+// Exo 11 ok
 
 //----------------------------------------------------------------------------------------------//
 
@@ -156,22 +229,35 @@
 //   return element.length
 // })
 
-// CODE ICI
+// const tableau = ["string", "string", "string"];
 
+// const newTableau = tableau.map((element) => {
+//   return element.length;
+// });
+
+// console.log(newTableau);
+
+// exo 12 ok
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 13
 
 // Crée une fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les premières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["H", "W"]
-// Pour cette exercice on va utiliser la méthode map() qui permet de parcourir un tableau. 
+// Pour cette exercice on va utiliser la méthode map() qui permet de parcourir un tableau.
 // Et la méthode charAt() qui permet de récupérer un caractère à une position précise :
 // const monTableau = ["Hello", "World"]
 // const monTableauPremiereLettre = monTableau.map((element) => {
 //   return element.charAt(0)
 // })
 
-// CODE ICI
+// const tableau = ["Salut", "Eric"];
+
+// const newTableau = tableau.map((element) => {
+//   return element.charAt(0);
+// });
+
+// console.log(newTableau);
 
 //----------------------------------------------------------------------------------------------//
 
@@ -181,9 +267,15 @@
 // Exemple : ["Hello", "World"] => ["o", "d"]
 // Indice regarde l'exercice 13, c'est exactement la même chose sauf qu'il faut récupérer la dernière lettre et non la première.
 
+// const tableau = ["Hello", "Hello"];
 
-// CODE ICI
+// const newTableau = tableau.map((element) => {
+//   return element.charAt(4);
+// });
 
+// console.log(newTableau);
+
+// exo 14 ok
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 15
@@ -192,7 +284,15 @@
 // Exemple : ["Hello", "World","Test", "Salut", "Yo"] => ["Hello", "World", "Salut"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la longueur de la string. Incice : la méthode length() permet de récupérer la longueur d'une string.
 
-// CODE ICI
+// const tableau = ["Hello", "World", "Test", "Salut", "Yo"];
+
+// newTableau = tableau.filter((element) => {
+//   return element.length >= 5;
+// });
+
+// console.log(newTableau);
+
+// exo 15 ok
 
 //----------------------------------------------------------------------------------------------//
 
@@ -206,8 +306,14 @@
 //   return accumulateur + element
 // }, 0)
 
-// CODE ICI
+// const tableau = [2, 2, 2, 2];
+// const somme = tableau.reduce((accumulateur, nombre) => {
+//   return accumulateur + nombre;
+// });
 
+// console.log(somme);
+
+// exo 16 Ok
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 17
@@ -219,8 +325,6 @@
 // const monTableau2 = ["Test", "Salut"]
 // const monTableauConcat = monTableau1.concat(monTableau2)
 // console.log(monTableauConcat) // ["Hello", "World", "Test", "Salut"]
-
-// CODE ICI
 
 //----------------------------------------------------------------------------------------------//
 
@@ -250,7 +354,7 @@
 
 // Crée une fonction qui renvoie la longueur du ou des mots les plus courts dans une phrase.
 // La chaîne ne sera jamais vide et vous n'avez pas besoin de tenir compte des différents types de données.
-// Exemple : 
+// Exemple :
 // findShort("Prachett is the best author in the world ") // 2
 // findShort("The quick brown fox jumps over the lazy dog") // 3
 
@@ -259,7 +363,7 @@
 // const monTableau = maString.split(" ")
 // console.log(monTableau) // ["Hello", "World"]
 // Indice 2 :  Oublie pas de boucler sur le tableau pour récupérer la longueur de chaque mot. Que soit avec un for ou avec la méthode map().
-// Indice 3 : Pour récupérer le mot le plus court tu dois voir la longueur de chaque mot, quel méthode permet de récupérer la longueur d'une string ? 
+// Indice 3 : Pour récupérer le mot le plus court tu dois voir la longueur de chaque mot, quel méthode permet de récupérer la longueur d'une string ?
 // Indice 4 : Pour récupérer le mot le plus court tu dois le trier, quel méthode permet de trier un tableau ? Si tu as utilisé la méthode map() pour récupérer la longueur de chaque mot, tu peux utiliser la méthode sort() directement sur le tableau que tu as récupéré avec la méthode map().
 // Indice 5 : Le .sort() trie les nombres en fonction de leur valeur unicode, pour trier des nombres il faut utiliser une fonction de comparaison :
 // const monTableau = [1, 2, 3, 4, 5]
@@ -268,19 +372,7 @@
 // })
 // Indice 6 : Pour récupérer le premier élément d'un tableau tu peux utiliser la notation crochet : monTableau[0]
 
-
-
-
-
 // CODE ICI
-
-
-
-
-
-
-
-
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
@@ -297,36 +389,27 @@
 //     let tableauTri = tableauLongueur.sort((a, b) => {
 //         return a - b
 //     }
-//     )   
+//     )
 //     return tableauTri[0]
 // }
 
 // console.log(findShort("Prachett is the best author in the world"))
 
-
 //----------------------------------------------------------------------------------------------//
 
-// EXERCICE 21 
+// EXERCICE 21
 
- //Écrivez une fonction `anagram` qui prend deux chaînes et renvoie un booléen indiquant si les chaînes sont des anagrammes l'une de l'autre. Deux chaînes sont des anagrammes l'une de l'autre si elles contiennent les caractères, quel que soit l'ordre des caractères. Par exemple, "listen" et "silent" sont des anagrammes l'une de l'autre
+//Écrivez une fonction `anagram` qui prend deux chaînes et renvoie un booléen indiquant si les chaînes sont des anagrammes l'une de l'autre. Deux chaînes sont des anagrammes l'une de l'autre si elles contiennent les caractères, quel que soit l'ordre des caractères. Par exemple, "listen" et "silent" sont des anagrammes l'une de l'autre
 
- // Indice : Oubliez pas de transformer les string en tableau pour pouvoir les trier et les comparer. Utilisez la méthode split() pour transformer une string en tableau et la méthode sort() pour trier un tableau. Puis comparez les deux tableaux avec la méthode join() qui permet de transformer un tableau en string.
-
+// Indice : Oubliez pas de transformer les string en tableau pour pouvoir les trier et les comparer. Utilisez la méthode split() pour transformer une string en tableau et la méthode sort() pour trier un tableau. Puis comparez les deux tableaux avec la méthode join() qui permet de transformer un tableau en string.
 
 // CODE ICI
-
-
-
-
-
-
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
 //--------------------------------------SOLUTIONS-----------------------------------------------//
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
-
 
 // const anagram = (string1, string2) => {
 //     let tableau1 = string1.split("")
@@ -342,26 +425,18 @@
 
 // console.log(anagram("listen", "silent"))
 
-
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 22
 
 //Ecrivez une fonction qui enlève les doubles lettres d'une chaîne donnée. Par exemple, "google" deviendrait "gogle"
-// Par exemple : 
+// Par exemple :
 // removeDoubleLetters("google") // "gogle"
 // removeDoubleLetters("Hello World!") // "Helo World!"
-//Indice : Afin de supprimer les doubles lettres, vous devez parcourir la chaîne et comparer chaque caractère avec le caractère suivant. Si les deux caractères sont identiques, vous devez supprimer le deuxième caractère. Donc pour pouvoir comporaer chaque caractère avec le suivant, vous devez transformer la string en tableau. 
+//Indice : Afin de supprimer les doubles lettres, vous devez parcourir la chaîne et comparer chaque caractère avec le caractère suivant. Si les deux caractères sont identiques, vous devez supprimer le deuxième caractère. Donc pour pouvoir comporaer chaque caractère avec le suivant, vous devez transformer la string en tableau.
 // Indice 2 : Pour supprimer un élément d'un tableau vous pouvez utiliser la méthode splice() combiné à une boucle ou la méthode filter() qui permet de filtrer un tableau en fonction d'une condition.
 
-
 // CODE ICI
-
-
-
-
-
-
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
@@ -376,7 +451,6 @@
 //     })
 //     return tableauFiltre.join("")
 // }
-
 
 // console.log(removeDoubleLetters("google"))
 
@@ -395,16 +469,12 @@
 
 // EXERCICE 23
 
- //Écrivez une fonction qui prend un tableau de 10 entiers (entre 0 et 9) et renvoie une chaîne de caractères sous la forme d'un numéro de téléphone.
+//Écrivez une fonction qui prend un tableau de 10 entiers (entre 0 et 9) et renvoie une chaîne de caractères sous la forme d'un numéro de téléphone.
 // Exemple :
 // createPhoneNumber([1,2,3,4,5,6,7,8,9,0]) // "(123) 456-7890"
 // Indice : Utilisez la méthode slice() pour découper le tableau en plusieurs morceaux. Puis utilisez la méthode join() pour transformer un tableau en string.
 
 // CODE ICI
-
-
-
-
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
@@ -417,15 +487,11 @@
 //     let tableau2 = tableau.slice(3, 6)
 //     let tableau3 = tableau.slice(6, 10)
 //     return `(${tableau1.join("")}) ${tableau2.join("")}-${tableau3.join("")}`
-// }    
+// }
 
 // console.log(createPhoneNumber([1,2,3,4,5,6,7,8,9,0]))
 
 //----------------------------------------------------------------------------------------------//
-
-
-
-
 
 // EXERCICE 24
 
@@ -433,17 +499,11 @@
 // Exemple :
 // findMissingLetter(["a","b","c","d","f"]) // "e"
 // findMissingLetter(["O","Q","R","S"]) // "P"
-// Indice : Oubliez pas de boucler et vous pouvez utiliser la méthode charCodeAt() pour récupérer le code unicode d'un caractère. 
+// Indice : Oubliez pas de boucler et vous pouvez utiliser la méthode charCodeAt() pour récupérer le code unicode d'un caractère.
 // Indice 2 : Vous pouvez utiliser la méthode fromCharCode() pour récupérer un caractère à partir de son code unicode.  Exemple : String.fromCharCode(65) renvoie "A". Mais attention à refaire la boucle dans l'autre sens pour pouvoir comparer les codes unicode des caractères du tableau avec les codes unicode des caractères manquants.
 // Indice 3 : Il y a plus cas comparer les codes unicode des caractères du tableau avec les codes unicode des caractères manquants pour trouver le caractère manquant avec une condition if. Et retourner le caractère manquant avec un return et la méthode fromCharCode().
 
 // CODE ICI
-
-
-
-
-
-
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
@@ -465,10 +525,9 @@
 
 //----------------------------------------------------------------------------------------------//
 
-
 // EXERCICE 25
 
- //Écrivez une fonction qui prend un tableau de string et renvoie un tableau de string triées par ordre alphabétique.
+//Écrivez une fonction qui prend un tableau de string et renvoie un tableau de string triées par ordre alphabétique.
 // Exemple :
 // sortString(["Banana", "Orange", "Apple", "Mango"]) // ["Apple", "Banana", "Mango", "Orange"]
 // sortString(["lait", "beurre", "fromage", "yaourt"]) // ["beurre", "fromage", "lait", "yaourt"]
@@ -478,20 +537,11 @@
 
 // CODE ICI
 
-
-
-
-
-
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
 //--------------------------------------SOLUTIONS-----------------------------------------------//
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
-
-
-
-
 
 // const sortString = (tableau) => {
 //     return tableau.sort((a, b) => {
@@ -506,4 +556,3 @@
 // }
 
 // console.log(sortString(["Banana", "Orange", "Apple", "Mango"]))
-
