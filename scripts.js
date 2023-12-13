@@ -47,11 +47,14 @@
 // monTableau.pop()
 // console.log(monTableau) // [1, 2]
 
-// const monTableau = [1, 2, 3];
-// monTableau.pop();
-// console.log(monTableau);
+// function dernierElement(tableau) {
+//   tableau.pop();
+// }
+// let myArray = [1, 2, 3];
+// dernierElement(myArray);
+// console.log(myArray);
 
-// Exo OK
+// // Exo OK
 
 // ----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -66,7 +69,7 @@
 
 // const tableau4 = [1, 2, 3, 4, 5];
 
-// const somme = (tableau4) => {
+// const somme = (tableau) => {
 //   let total = 0;
 //   for (let i = 0; i < tableau4.length; i++) {
 //     total += tableau4[i];
@@ -170,11 +173,11 @@
 
 // const tableau = [6, 3, 8, 1, 4];
 
-// const myArray = (Montableau) => {
-//   return console.log(Montableau.sort());
-// };
+// function arrayFiltre(tableau) {
+//   return tableau.sort();
+// }
 
-// console.log(myArray(tableau));
+// console.log(arrayFiltre(tableau));
 
 // Exo ok
 
@@ -326,6 +329,18 @@
 // const monTableauConcat = monTableau1.concat(monTableau2)
 // console.log(monTableauConcat) // ["Hello", "World", "Test", "Salut"]
 
+// const string1 = ["Coucou", "je suis"];
+// const string2 = ["content", "de faire de l'algo"];
+
+// const fusionArray = (tableau1, tableau2) => {
+//   const arrayConcat = tableau1.concat(tableau2);
+//   return arrayConcat;
+// };
+
+// console.log(fusionArray(string1, string2));
+
+// Exo 17 Ok
+
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 18
@@ -334,9 +349,21 @@
 // Exemple : ["Poulet", "Chat", "Chien", "Cheval"] => ["Poulet", "Chien", "Cheval"]
 // Pour cette exercice on va utiliser la méthode filter() qui permet de filtrer un tableau, hésitez pas à regarder l'exercice 8 pour voir comment ça fonctionne. Sauf qu'ici on va filtrer en fonction de la présence de la lettre "e". Indice : la méthode includes() permet de savoir si une string contient une lettre ou un mot.
 
-// CODE ICI
+// const myArray = ["Poulet", "Chat", "Chien", "Cheval"];
 
-//----------------------------------------------------------------------------------------------//
+// const filtrerStringsAvecE = (tableau) => {
+//   const resultatsFiltres = tableau.filter((element) => {
+//     return element.includes("e");
+//   });
+//   return resultatsFiltres;
+// };
+
+// const resultat = filtrerStringsAvecE(myArray);
+// console.log(resultat);
+
+// console.log(filtrerStringsAvecE(myArray));
+
+// exo 18 Ok
 
 // EXERCICE 19
 
@@ -344,8 +371,23 @@
 // Exemple : [ 2, 9, 6, 5, 6] => [2, 6, 6]
 // Indice : il y a plusieurs façon de faire, soit avec un for, soit avec la méthode filter() une fois ça fait utilise la méthode sort() qui permet de trier un tableau.
 
-// CODE ICI
+// const myArray = [2, 3, 4, 6, 5, 12, 21, 20];
 
+// const array2 = (tableau) => {
+//   const arrayFilterPair = tableau.filter((element) => {
+//     return element % 2 === 0;
+//   });
+
+//   const arrayCroissant = arrayFilterPair.sort((a, b) => {
+//     return a - b;
+//   });
+
+//   return arrayCroissant;
+// };
+
+// console.log(array2(myArray));
+
+// Exo 19 Ok
 //----------------------------------------------------------------------------------------------//
 
 // EXERCICE 20
@@ -372,7 +414,24 @@
 // })
 // Indice 6 : Pour récupérer le premier élément d'un tableau tu peux utiliser la notation crochet : monTableau[0]
 
-// CODE ICI
+// const maString = "Je suis une phrase";
+
+// function stringModif(string) {
+//   let tranformArray = string.split(" ");
+//   let lenghtArray = tranformArray.map((element) => {
+//     return element.length;
+//   });
+
+//   let triArray = lenghtArray.sort((a, b) => {
+//     return a - b;
+//   });
+
+//   return triArray[0];
+// }
+
+// console.log(stringModif(maString));
+
+// exo 20 ok
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
@@ -403,8 +462,24 @@
 
 // Indice : Oubliez pas de transformer les string en tableau pour pouvoir les trier et les comparer. Utilisez la méthode split() pour transformer une string en tableau et la méthode sort() pour trier un tableau. Puis comparez les deux tableaux avec la méthode join() qui permet de transformer un tableau en string.
 
-// CODE ICI
+// const maString1 = "silent";
+// const maString2 = "listen";
 
+// const anagram = (string1, string2) => {
+//   let array1 = string1.split("");
+//   let array2 = string2.split("");
+//   let array1Tri = array1.sort();
+//   let array2Tri = array2.sort();
+//   if (array1.join("") === array2.join("")) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// };
+
+// console.log(anagram(maString1, maString2));
+
+// exo 21 ok
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
 //--------------------------------------SOLUTIONS-----------------------------------------------//
@@ -436,8 +511,19 @@
 //Indice : Afin de supprimer les doubles lettres, vous devez parcourir la chaîne et comparer chaque caractère avec le caractère suivant. Si les deux caractères sont identiques, vous devez supprimer le deuxième caractère. Donc pour pouvoir comporaer chaque caractère avec le suivant, vous devez transformer la string en tableau.
 // Indice 2 : Pour supprimer un élément d'un tableau vous pouvez utiliser la méthode splice() combiné à une boucle ou la méthode filter() qui permet de filtrer un tableau en fonction d'une condition.
 
-// CODE ICI
+// const maString = "google";
 
+// const removeDoubleLetters = (string) => {
+//   let tableau = string.split("");
+//   let tableauFiltre = tableau.filter((element, index) => {
+//     return element !== tableau[index + 1];
+//   });
+//   return tableauFiltre.join("");
+// };
+
+// console.log(removeDoubleLetters(maString));
+
+// exo 22 ok
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
 //--------------------------------------SOLUTIONS-----------------------------------------------//
