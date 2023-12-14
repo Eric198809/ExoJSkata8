@@ -562,6 +562,23 @@
 
 // CODE ICI
 
+// const array = [0, 6, 5, 4, 5, 6, 7, 8, 9, 0];
+
+// const phoneNumber = (tableau) => {
+//   let tableau1 = tableau.slice(0, 2);
+//   let tableau2 = tableau.slice(2, 4);
+//   let tableau3 = tableau.slice(4, 6);
+//   let tableau4 = tableau.slice(6, 8);
+//   let tableau5 = tableau.slice(8, 10);
+//   return `${tableau1.join("")} ${tableau2.join("")} ${tableau3.join("")} ${tableau4.join("")} ${tableau5.join("")}`;
+//
+//
+// };
+
+// console.log(phoneNumber(array));
+
+// exo 23 ok
+
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
 //--------------------------------------SOLUTIONS-----------------------------------------------//
@@ -588,8 +605,6 @@
 // Indice : Oubliez pas de boucler et vous pouvez utiliser la méthode charCodeAt() pour récupérer le code unicode d'un caractère.
 // Indice 2 : Vous pouvez utiliser la méthode fromCharCode() pour récupérer un caractère à partir de son code unicode.  Exemple : String.fromCharCode(65) renvoie "A". Mais attention à refaire la boucle dans l'autre sens pour pouvoir comparer les codes unicode des caractères du tableau avec les codes unicode des caractères manquants.
 // Indice 3 : Il y a plus cas comparer les codes unicode des caractères du tableau avec les codes unicode des caractères manquants pour trouver le caractère manquant avec une condition if. Et retourner le caractère manquant avec un return et la méthode fromCharCode().
-
-// CODE ICI
 
 //----------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------//
